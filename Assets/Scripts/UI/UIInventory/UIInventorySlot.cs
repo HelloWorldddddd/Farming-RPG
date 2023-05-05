@@ -31,10 +31,23 @@ public class UIInventorySlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEnd
     {
         parentCancas = GetComponentInParent<Canvas>();
     }
+
+    private void OnEnable()
+    {
+        EventHandler.AfterSceneLoadEvent += SceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.AfterSceneLoadEvent -= SceneLoaded;
+    }
+
     private void Start()
     {
         mainCamera = Camera.main;
-        parentItemTransform = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
+
+        //不能保证别的场景加载前存在Item（所有物品的父级），所以需要监听场景加载
+        //parentItemTransform = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
     }
 
     //在拖动之前调用
@@ -214,5 +227,12 @@ public class UIInventorySlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEnd
             }
         }
     }
+
+
+    private void SceneLoaded()
+    {
+        parentItemTransform = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
+    }
+
 }
 

@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9971272}
+  - component: {fileID: 9971273}
   m_Layer: 0
   m_Name: SceneControllerManager
   m_TagString: Untagged
@@ -154,6 +155,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9971273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9971271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b3cdda324f44c41a23c792749a4e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 1
+  faderCanvasGroup: {fileID: 1800317809}
+  faderImage: {fileID: 1800317810}
+  startingSceneName: 0
 --- !u!1 &84870049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,7 +3274,7 @@ GameObject:
   - component: {fileID: 1800317810}
   - component: {fileID: 1800317809}
   m_Layer: 0
-  m_Name: FadeImage
+  m_Name: Fader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

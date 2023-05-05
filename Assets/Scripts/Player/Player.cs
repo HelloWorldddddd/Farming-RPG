@@ -234,13 +234,17 @@ public class Player : Singleton<Player>
     //时间快进测试
     private void PlayerTestInput()
     {
-        if (Input.GetKey(KeyCode.T))
+        if (Input.GetKey(KeyCode.T))    //快进分钟测试
         {
             TimeManager.Instance.TestAdvancedGameMinute();
         }
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKey(KeyCode.G))    //快进日期测试
         {
             TimeManager.Instance.TestAdvancedGameDay();
+        }
+        if (Input.GetKey(KeyCode.L))    //加载场景测试
+        {
+            SceneControllerManager.Instance.FadeAndLoadScene(SceneName.Scene1_Farm.ToString(), transform.position);
         }
     }
 }

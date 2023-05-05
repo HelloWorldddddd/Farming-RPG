@@ -34,9 +34,9 @@ public static class EventHandler
     public static event Action BeforeSceneUnloadFadeOutEvent;
     //场景卸载前事件
     public static event Action BeforSceneUnloadEvent;
-    //场景卸载后淡入事件
+    //场景加载后淡入事件
     public static event Action AfterSceneLoadFadeInEvent;
-    //场景卸载后事件
+    //场景加载后事件
     public static event Action AfterSceneLoadEvent;
 
     //===================================================================================================================
