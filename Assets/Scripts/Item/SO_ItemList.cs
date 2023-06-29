@@ -7,5 +7,6 @@ public class SO_ItemList : ScriptableObject
 {
     [SerializeField]
     public List<ItemDetails> itemDetails;
+
 }
 

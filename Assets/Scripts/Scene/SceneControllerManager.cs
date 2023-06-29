@@ -43,10 +43,10 @@ public class SceneControllerManager : Singleton<SceneControllerManager>
         Player.Instance.gameObject.transform.position = spawnPosition;
         EventHandler.CallBeforeSceneUnloadEvent();
 
-        //异步加载场景
+        //异步卸载场景
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
-        //设置场景为活动场景
+        //异步加载场景并设置为活动场景
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
         EventHandler.CallAfterSceneLoadEvent();
 

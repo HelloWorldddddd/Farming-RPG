@@ -121,6 +121,7 @@ public enum Season
 
 public enum SceneName
 {
+    EldenRingOpening,
     Scene1_Farm,
     Scene2_Field,
     Scene3_Cabin

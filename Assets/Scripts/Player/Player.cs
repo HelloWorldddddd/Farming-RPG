@@ -231,9 +231,14 @@ public class Player : Singleton<Player>
     }
 
 
-    //时间快进测试
+    //按键测试
     private void PlayerTestInput()
     {
+        if (Input.GetKeyDown(KeyCode.Q))    //按下Q键退出
+        {
+            Debug.Log("Quit!");
+            Application.Quit();
+        }
         if (Input.GetKey(KeyCode.T))    //快进分钟测试
         {
             TimeManager.Instance.TestAdvancedGameMinute();
